@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background: url("https://unsplash.imgix.net/reserve/m6rT4MYFQ7CT8j9m2AEC_JakeGivens%20-%20Sunset%20in%20the%20Park.JPG?q=75&fm=jpg&s=0be046e174fb7a1c83e882cef651959a") no-repeat top;
+  display: table;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100%;
+  color: black;
+}
+/* ----- NAVBAR ----- */
+.navbar-default .navbar-nav>li>a, .navbar-default .navbar-brand {
+  color: white;
+}
+.navbar-default {
+  background-color: transparent;
+  border-color: transparent;
+}
+.navbar-default .navbar-nav>li>a {
+  margin-top: 5px;
+  font-size: 18px;
+  margin: 10px 5px;
+  font-weight: 700;
+}
+.navbar-brand {
+  font-size: 26px;
+  line-height: inherit;
+}
+.navbar-brand span {
+  display: block;
+  font-size: 16px;
+  line-height: 0.5;
+  text-align: right;
+}
+.navbar-right li a.square {
+  border-radius: 130px;
+  padding: 8px 12px;
+  border: 3px solid white;
+  margin-top: 16px;
+}
+
+/* ----- MODAL ----- */
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.79);
+}
+/* ----- DEVISE ----- */
+.panel-default {
+  width: 300px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.79);
+
+}
+/* ----- CONTENT ----- */
+
+.home {
+  padding: 100px 0 150px 0;
+  text-align: center;
+}
+
+.home h1 {
+  color: darkcyan;
+  font-size: 44px;
+  font-weight: 900;
+}
+
+/* ----- STICKY FOOTER ----- */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: transparent;
+  text-align: right;
+}
+
+.social i {
+  font-size: 24px;
+  color: #fff;
+  border: 3px solid #fff;
+  width: 45px;
+  height: 45px;
+  padding: 9px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+
