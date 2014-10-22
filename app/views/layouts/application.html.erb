@@ -10,7 +10,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  
+
 </head>
 <body>
   <div class="navbar navbar-default" role="navigation">
@@ -31,7 +31,7 @@
           <li><%= link_to "Sign up", "#sign_up", "data-toggle" => "modal", :class => 'square' %></li>
           <li>
             <% if user_signed_in? %>
-              <%= link_to "Salir", destroy_user_session_path, method: :delete %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete %>
               <%= image_tag Gravatar.new(current_user.email).image_url %>
             <% end %>
           </li>
@@ -40,11 +40,10 @@
     </div>
   </div>
 
-  
 
   <div class="container">
     <% flash.each do |name, err|%>
-      <%= content_tag :div, err, class: name %>
+      <%= content_tag :div, err, class: "alert alert-info" %>
     <% end %>
 
     <%= render "welcome/login_modal" %>
@@ -70,6 +69,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    
+
 </body>
 </html>

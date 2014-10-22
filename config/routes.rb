@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#home'
 
+  get 'friends/index'
   post 'friends/like'
 
   get "about" => "welcome#about" # create about path
