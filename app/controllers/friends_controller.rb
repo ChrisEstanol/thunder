@@ -8,13 +8,16 @@ class FriendsController < ApplicationController
 
   def like
     # get data from like or unlike button
-    @friend         = User.find(params[:id])
+    @friend = User.find(params[:id])
     like_or_unlike  = params[:liked] == "true"
 
     # save like data into database
     current_user.likes.create(friend_id: @friend.id, liked: like_or_unlike)
 
     if @friend.liked?(current_user)
+      UserMailer.friend_email(current_user, @friend).deliver
+      # UserMailer.user_email(@friend).deliver
+
       render :match
     else
       redirect_to root_path

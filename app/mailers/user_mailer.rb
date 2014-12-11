@@ -1,9 +1,16 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "cestanol@gmail.com"
 
-  def welcome_email(user)
-    @user = user
-    @url = 'http://thunder.com/login'
-    mail(to: @user.email, subject: 'Welcome to Thunder')
+  def friend_email(friend, current_user)
+    @user_likes = friend
+    @user_liked = current_user
+    mail(to: @user_likes.email, subject: 'Thunder Match')
   end
+
+  def user_email(current_user, friend)
+    @user_liked = current_user
+    @user_likes = friend
+    mail(to: @user_liked.email, subject: 'Thunder Match')
+  end
+
 end
